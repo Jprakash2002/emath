@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>DIFFERENTIATION </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <style>
+          button{height:1.5cm;width:2.5cm;font-size:25px;font-weight:bold;bakcground-color:pink}
+          table,th,td{border:solid black;border-collapse: collapse;background-color:aliceblue;text-align:center;font-size:25px;padding:10px;}
+          table{position:top;}
+
+
+
+      </style>
+   </head>
+   <body style='background-color:aqua'>
+
+<marquee style='background-color:peru;height:1.5cm;font-size:50px'>DISCLAIMER : READ THE INSTRUCTIONS AND  ENTER THE CORRECT VALUES !!</marquee>
+
+         <form style='padding:40px;width:max-width;font-size:26px ;font-weight:bold' action='{%url "emath:difx" %}' method=POST>
+            {%csrf_token%}
+              <br></br>
+                {% for field in form  %}
+    {{ field.errors }}
+    <li style='font-size:30px'> {{ field.label_tag }} {{ field }} </li>
+    <br>
+
+  {% endfor %}
+
+
+             <input type='submit' style="box-shadow:2.5px 2.5px 2.5px 2.5px black;height:1.5cm;width:3cm;font-size:25px;font-weight:bold;background-color:pink;border:solid black;border-radius:10px">
+         </form>
+
+         <table>
+            <tr>
+                <th colspan=2>INSTRUCTIONS</th>
+            </tr>
+            <tr>
+                <th>IF</th>
+                <th>THEN TYPE AS</th>
+            </tr>
+            <tr>
+                <td>4x</td>
+                <td>4*x</td>
+            </tr>
+            <tr>
+                <td>x^2</td>
+                <td>x**2</td>
+
+            </tr>
+            <tr>
+                <td>if equation like (x-6)^2+6x+2x^3</td>
+                <td>(x-6)**2+(6*x)+(2*(x**3))</td>
+            </tr>
+            <tr>
+                <td>Trignometries like   cos x</td>
+                <td>cos(x)</td>
+            </tr>
+            <tr>
+                <td>Exponential  e^x</td>
+                <td>exp(x)</td>
+
+            </tr>
+            <tr>
+                <td>Logarithm log x</td>
+                <td>log(x)</td>
+            </tr>
+            <tr>
+                <td> if "log x" has base value other than e</td>
+                <td>log(x,base)</td>
+            </tr>
+
+            <tr>
+                <td colspan=2>Use parantheses where ever you want to seperate the operands</td>
+            </tr>
+            <tr>
+                <td colspan=2>f(x) should be with variables x , y , z .. if not change it accordingly</td>
+            </tr>
+            <tr>
+                <td colspan=2>Make sure you have entered all the variable in small letters</td>
+            </tr>
+
+         </table>
+    </body>
+</head>

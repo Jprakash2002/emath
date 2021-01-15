@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+</html>
+     <head>
+          <title> Result </title>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <style>
+          @media screen and (max-width: 481px){
+                button{height:1.5cm;width:2.5cm;font-size:25px;font-weight:bold;}
+          }
+          </style>
+     </head>
+     <body style='background-image:url(https://wallpapercave.com/wp/wp6198497.jpg)'>
+        <div style='padding=110px'>
+               <p style='font-size:60px'> THE ROOTS ARE   </p>
+               <ul>
+                   {%for ress in res%}
+                         <li style='font-size:30px'>{{ress}}</li>
+                         <br>
+                   {%endfor%}
+                </ul>
+               <a href='{%url "emath:cubic"%}' style='text-decoration:none'><button>RETRY</button>
+        </div>
+    </body>
+</html>

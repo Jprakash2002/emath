@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>SOLVING CUBIC EQUATION</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <style>
+          button{height:1.5cm;width:2.5cm;font-size:25px;font-weight:bold;bakcground-color:red}
+          body{background-image:url(https://wallpapercave.com/wp/wp5973142.jpg);}
+
+
+      </style>
+   </head>
+   <body >
+
+<marquee style='background-color:aqua;height:1.5cm;font-size:50px'>DISCLAIMER :  ENTER THE CORRECT VALUES !!</marquee>
+
+         <form style='padding:40px;width:max-width;font-size:26px ;font-weight:bold' action='{%url "emath:cubic" %}' method=POST>
+            {%csrf_token%}
+              <br></br>
+                {% for field in form  %}
+    {{ field.errors }}
+    <li style='font-size:30px'> {{ field.label_tag }} {{ field }} </li>
+    <br>
+
+  {% endfor %}
+
+             <input type='submit' style="height:1.5cm;width:3cm;font-size:25px;font-weight:bold;background-color:pink;border:solid black;border-radius:10px;box-shadow:2.5px 2.5px 2.5px 2.5px black">
+         </form>
+    </body>
+</head>
